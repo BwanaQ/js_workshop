@@ -12,7 +12,7 @@ const fetchCatData = async() => {
             totalAvgWeight += avgWeight
         })
         avgMetricWeight = totalAvgWeight / cats.length
-        console.log(avgMetricWeight.toFixed(2) + " Kgs")
+        console.log("A cats average weight is " + avgMetricWeight.toFixed(2) + " Kgs")
     } catch (err) {
         console.log(err)
     }
@@ -25,7 +25,7 @@ const fetchCountryData = async() => {
 
         largestCountries = countries.sort((a, b) => (a.area < b.area) ? 1 : -1).slice(0, 10);
         largestCountries.forEach(country => {
-            console.log("country Name : " + country.name + " Country Area:" + country.area)
+            console.log("country : " + country.name + ", Area:" + country.area)
         })
 
         let allLanguages = []
@@ -41,7 +41,7 @@ const fetchCountryData = async() => {
         }, []);
         console.log("The Languages of the world are... ")
         uniqueLanguages.forEach(uniqueLanguage => {
-            console.log(uniqueLanguage)
+            console.log(uniqueLanguagegit)
         })
         console.log(" and they are " + uniqueLanguages.length)
     } catch (err) {
